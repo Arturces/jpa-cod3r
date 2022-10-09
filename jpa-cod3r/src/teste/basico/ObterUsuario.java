@@ -2,29 +2,25 @@ package teste.basico;
 
 import modelo.basico.Usuario;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class NovoUsuario {
+public class ObterUsuario {
 
     public static void main(String[] args) {
+
 
         EntityManagerFactory emf = Persistence
                 .createEntityManagerFactory("jpa-cod3r");
         EntityManager em = emf.createEntityManager();
 
-        Usuario novoUsuario = new Usuario("Cesar", "cesar@gmail.com");
+        Usuario usuario = em.find(Usuario.class, 3L); //buscar valor na base de dados
+        System.out.println(usuario.getNome());
 
-        em.getTransaction().begin(); //transação exigida por conta da persistencia da api
-        em.persist(novoUsuario);
-        em.getTransaction().commit();
 
-        System.out.println("O ID gerado foi : " +novoUsuario.getId());
 
-        em.clear();
+        em.close();
         emf.close();
-
     }
 }

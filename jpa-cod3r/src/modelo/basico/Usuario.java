@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Usuario {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//GERAÇÃO  DE CHAVE AUTOMATICA DO VALOR IDENTIDADE CADA UM TEM SUA PROPROA SEQUENCIA DE ID SEM COMPARTILHAR, NAO CRIA A TABELA HIBERNAT
     private Long id;
 
     //@Transient//annotation trasiente para nao mapear o atributo para o banco de dados, nao tem correpondecia para o banco de dados
