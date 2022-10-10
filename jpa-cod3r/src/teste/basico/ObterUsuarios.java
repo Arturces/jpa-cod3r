@@ -21,7 +21,7 @@ public class ObterUsuarios {
         query.setMaxResults(2);*/
 
         List<Usuario> usuarios = em.createQuery("select u from Usuario u", Usuario.class)
-                .setMaxResults(2)
+                .setMaxResults(2 )
                 .getResultList();
 
         for(Usuario usuario: usuarios){
