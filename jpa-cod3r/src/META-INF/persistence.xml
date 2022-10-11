@@ -7,6 +7,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     <persistence-unit name="jpa-cod3r" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>modelo.basico.Usuario</class>
+        <class>modelo.basico.Produto</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
