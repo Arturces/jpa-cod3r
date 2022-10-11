@@ -14,14 +14,14 @@ public class DAO<E> {
 
     static {
         try {
-            emf = Persistence.createEntityManagerFactory("jpa-cod3r ")
+            emf = Persistence.createEntityManagerFactory("jpa-cod3r");
         } catch (Exception e) {
 
         }
     }
 
     public DAO() {
-        this. (null);
+        this(null);
     }
 
     public DAO(Class<E> classe) {
