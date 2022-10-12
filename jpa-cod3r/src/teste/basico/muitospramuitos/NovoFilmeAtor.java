@@ -20,9 +20,8 @@ public class NovoFilmeAtor {
 
         filmeB.adicionarAtor(atorA);
 
-        DAO<Filme> dao = new DAO<Filme>();
+        DAO<Filme> dao = new DAO<>();
         dao.incluirAtomico(filmeA);
-
 
     }
 }
