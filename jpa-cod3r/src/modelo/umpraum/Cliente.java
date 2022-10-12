@@ -12,7 +12,7 @@ public class Cliente {
 
     private String nome;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST})
     @JoinColumn(name = "assento_id", unique = true)//annotation para relação obrigatoria para ser unico, relação um pra um, especifica para mapear uma coluna relacao entre duas tabelas
     private Assento assento;
 
