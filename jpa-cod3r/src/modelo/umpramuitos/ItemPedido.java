@@ -18,7 +18,7 @@ public class ItemPedido {
     @Column(nullable = false)
     private Double preco;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER) //consulta padrao defaul para trazer os dados.
     private Pedido pedido;
 
     @ManyToOne

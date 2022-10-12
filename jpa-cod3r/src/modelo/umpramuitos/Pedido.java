@@ -14,7 +14,7 @@ public class Pedido {
     @Column(nullable = false)
     private Date data;
 
-    @OneToMany(mappedBy = "pedido")
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)//forma padrão de consulta para Todos Many.
     private List<ItemPedido> itens;
 
     public Pedido(){
